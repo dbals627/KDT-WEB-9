@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        div {
+            height: 30px;
+        }
+
+        /* div에 공통적인 것은 height! 이기 때문에 
+        style에서 div로 묶어주는 것이 효율적! 
+        공통적인 것은 최대한 묶자  */
+
         .rainbow {
             color: white;
             background-color: black;
@@ -12,62 +21,65 @@
         }
 
         .red {
-            color: red;
             background-color: red;
             width: 40px;
+
         }
 
         .orange {
-            color: orange;
             background-color: orange;
             width: 60px;
+
         }
 
         .yellow {
-            color: yellow;
             background-color: yellow;
             width: 80px;
+
         }
 
         .green {
-            color: green;
             background-color: green;
             width: 100px;
+
         }
 
         .blue {
-            color: blue;
             background-color: blue;
             width: 120px;
+
         }
 
         .navy {
-            color: navy;
             background-color: navy;
             width: 140px;
+
         }
 
         .violet {
-            color: purple;
             background-color: purple;
             width: 160px;
+
         }
-
-
-
     </style>
 </head>
+
 <body>
     <div class="rainbow">무지개</div>
+    <!-- span 태그는 대표적인 인라인 태그 -->
+
     <br />
 
-    <div class="red">red</div>
-    <div class="orange">orange</div>
-    <div class="yellow">yellow</div>
-    <div class="green">green</div>
-    <div class="blue">blue</div>
-    <div class="navy">navy</div>
-    <div class="violet">violet</div>
-    
+    <div class="red"></div>
+    <div class="orange"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="navy"></div>
+    <div class="violet"></div>
+
+
+
 </body>
+
 </html>
