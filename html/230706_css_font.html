@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+        /* 구글폰트 */
+
+        @font-face {
+            font-family: 'TTWanjudaedunsancheB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* 눈누폰트 */
+
+        :root {
+            font-size: 20px;
+            /* font-family: 'Noto Sans KR', sans-serif;*/
+        }
+
+        /* 모든 폰트에 적용 */
+
+        main {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .font-px {
+            font-size: 40px;
+            font-family: 'TTWanjudaedunsancheB';
+        }
+
+        /* 해상도에 따라 변함 */
+
+        .font-em {
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+        /* em = 16px의 1.5배를 하는 것 */
+
+        .font-rem {
+            font-size: 1.5rem;
+            line-height: 2;
+            text-align: left;
+        }
+
+        /* 폰트사이즈 30
+        라인높이는 폰트사이즈의 두배인 60픽셀 */
+
+        .font-per {
+            font-size: 100%;
+            color: hsl(329, 100%, 50%);
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        /* 16px의 1.5배 
+
+        em은 가장 가까운 부모 요소(main)의 폰트사이즈를 기준으로 함 
+        rem은 가장 상위요소(root)의 폰트사이즈를 기준으로 함
+        per은 부모요소를 기준으로 함 */
+
+        a {
+            text-decoration: none;
+        }
+
+        /* span {
+            display: inline;
+        }
+
+        div {
+            display: block;
+        } */
+
+        .inline-block {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="font-px">안녕하세요</div>
+        <div class="font-em">안녕하세요</div>
+        <div class="font-rem">안녕하세요</div>
+        <div class="font-per">안녕하세요</div>
+
+        <a href="#">에이태그</a>
+
+        <div style="background-color: red; width: 100px;">aaa</div>
+
+        <span sytle="background-color: blue">ddd</span>
+
+        <div style="display: inline-block; 
+        background-color: yellow;
+        width: 300;">ccc</div>
+
+    </main>
+</body>
+
+</html>
