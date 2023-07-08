@@ -10,7 +10,7 @@
             position: relative;
         }
 
-        .one {
+        .parent>div {
             position: absolute;
             height: 80px;
             width: 80px;
@@ -18,83 +18,85 @@
 
         }
 
-        .one.one1 {
+        .one1 {
             background-color: #0097e8;
-            z-index: 1;
-
+           
         }
 
-        .one.one2 {
-            background-color: hsl(205, 89%, 41%);
+        .one2 {
+            background-color: #0c78c6;
             left: 60px;
             top: 20px;
-            z-index: 2;
+           
         }
 
-        .one.one3 {
-            background-color: hsl(227, 64%, 39%);
+        .one3 {
+            background-color: #243fa3;
             left: 100px;
             top: 50px;
-            z-index: 3;
+            
 
         }
 
-        .one.one4 {
+        .one4 {
             background-color: #9ebbef;
             left: 150px;
             top: 48px;
-            z-index: 4;
+            
         }
 
-        .one.one5 {
+        .one5 {
             background-color: #0e7f87;
             left: 200px;
             top: 48px;
-
+            z-index: 10;
+           
         }
 
-        .one.eyes {
+        .white {
             height: 27px;
             width: 27px;
             background-color: white;
-            border-radius: 50px;
+            position: relative;
             left: 18px;
             top: 15px;
-
+            border-radius: 50px;
         }
 
-        .one.black {
+        .black {
             height: 13px;
             width: 13px;
             background-color: black;
-            border-radius: 50px;
+            position: relative;
             top: 5px;
+            border-radius: 50px;
+     
         }
 
         img {
             width: 450px;
-            z-index: 7;
+            position: relative;
+            top: 40px;
+            
         }
+
     </style>
 </head>
 
 <body>
-
-
     <div class="parent">
-
-        <div class="one one1">
-            <div class="one eyes">
-                <div class="one black"></div>
+        <div class="one1">
+            <div class="white">
+                <div class="black"></div>
             </div>
         </div>
 
-        <div class="one one2"></div>
-        <div class="one one3"></div>
-        <div class="one one4"></div>
-        <div class="one one5"></div>
+        <div class="one2"></div>
+        <div class="one3"></div>
+        <div class="one4"></div>
+        <div class="one5"></div>
 
-        <img src="./pngwing.com.png">
+        <img src="../pngwing.com.png">
 
 
     </div>

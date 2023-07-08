@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #ddd;
+            padding: 0 20px;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+
+        .header1_menu {
+            display: flex;
+        }
+
+        .header1_menu li {
+            padding-left: 15px;
+        }
+
+        .header3_menu {
+            display: flex;
+        }
+
+        .header3_menu li {
+            padding: 0 8px;
+        }
+
+        .header4_logo_menu {
+            display: flex;
+
+        }
+
+        .header4_logo_menu li {
+            padding-right: 15px;
+        }
+
+
+        .header4_login_signup {
+            display: flex;
+        }
+
+        .header4_login_signup li {
+            padding-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex를 이용해 여러 종류의 Header를 만들어보자!</h1>
+
+    <header>
+        <ul class="header1_logo">
+            <li>LOGO</li>
+
+        </ul>
+
+        <ul class="header1_menu">
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+        </ul>
+    </header>
+
+    <header>
+        <ul>
+            <li>MENU1</li>
+
+        </ul>
+
+        <ul>
+            <li>MENU2</li>
+
+        </ul>
+
+        <ul>
+            <li>MENU3</li>
+
+        </ul>
+
+    </header>
+
+    <header>
+        <ul class="header3_logo">
+            <li>LOGO</li>
+
+        </ul>
+
+        <ul class="header3_menu">
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+
+        </ul>
+
+        <ul class="header3_login">
+            <li>LOGIN</li>
+
+        </ul>
+
+    </header>
+
+    <header>
+        <ul class="header4_logo_menu">
+            <li>LOGO</li>
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+        </ul>
+
+        <ul class="header4_login_signup">
+            <li>LOGIN</li>
+            <li>SIGNUP</li>
+
+
+        </ul>
+
+
+
+    </header>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: blanchedalmond;
+        }
+
+        .container>div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 박스에 담긴 아이템들은 모두 공통속성이기 때문에 묶어준다. */
+
+        .relative {
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+        }
+
+        /* absoulte를 지정할 때는 부모요소의 position이 relative인 것을 기준으로 한다. */
+
+        .fixed {
+            position: fixed;
+            right: 100px;
+            top: 100px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="relative">relative</div>
+        <div class="absolute">absolute</div>
+        <div class="fixed">fixed</div>
+    </div>
+</body>
+
+</html>
