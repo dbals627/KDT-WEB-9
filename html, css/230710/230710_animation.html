@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            position : absolute;
+            width : 100px;
+            height : 100px;
+            background-color : pink;
+            border-radius: 50px;
+            animation: move 3s 6;
+        }
+
+        @keyframes move {
+            /* from {
+                left: 0px;
+
+            }       
+
+            to {
+                left: 100px;
+
+            } */
+
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                top: 0px;
+
+                left: 300px;
+            }
+
+            50% {
+                left:300px;
+                top:300px;
+                
+                
+            }
+
+            75% {
+                left:0px;
+                top: 300px;
+                
+               
+
+
+            }
+
+            100% {
+                left:0px;
+                top: 0px;
+                
+                
+            }
+
+        
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+    
+    
+</body>
+</html>

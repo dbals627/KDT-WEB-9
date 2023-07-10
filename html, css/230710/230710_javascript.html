@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- head에 많은 스크립트가 있으면 로딩이 길어짐 -->
+    <script src="./js/index.js"></script>
+    <script>
+        let animals = ["dog", "cat", "lion"];
+
+        let cat = {
+            age: 5,
+            name: "냥이",
+            mew: function () {
+                console.log("야옹");
+            }
+        }
+
+        let dog = {
+            name: "초코",
+
+        }
+
+        console.log(cat)
+        console.log(cat.age)
+        cat.mew()
+
+        console.log(dog.name)
+
+
+        let my = {
+            age: 27,
+            name: "전유민",
+            mbti: "istp"
+        }
+
+        console.log(my)
+        console.log(my.name)
+        console.log(my.age)
+        console.log(my.mbti)
+
+        console.log(typeof my.age) // undifined => undefined 자료형
+        console.log(typeof cat.mew)  // 함수는 function자료형
+        console.log(typeof my.name)
+        console.log(typeof null) // nul => object 자료형
+
+        // let mathScore = prompt("수학성적");
+        // let engScore = prompt("영어성적");
+
+        // console.log(mathScore, engScore)
+
+        // let avgScore = (Number(mathScore) + Number(engScore)) / 2;
+
+        // // number()로 숫자처리!
+        // // string()
+
+        // console.log(avgScore)
+
+        // console.log(String(null))
+
+        // let num = 5;
+        // console.log(num.toString(), 5)
+
+        console.log(`${typeof 5} isn't ${typeof "아무 문자열"} data type.`)
+
+        console.log(`Typeof를 boolean 이나 null에 사용하면, ${typeof null} 결과를 얻을 수 있습니다. `)
+
+    </script>
+
+    <script>
+        let num = 1;
+        num = 5; // 1은 무의미한 값 
+
+        let numString = "5";
+
+        console.log(num >= 1) //num 이 3과 같은지 확인. 반환값은 t/f
+        console.log(num <= 1)
+
+        // ==, !=, <, <=, > , >=
+        // ===, !==
+
+        console.log(num == numString)
+        console.log(num === numString) // === 는 타입까지 비교 
+
+        console.log(num != numString)
+        console.log(num !== numString)
+
+        console.log(num + 5)
+        console.log(num - 5)
+        console.log(num * 5)
+        console.log(num / 5)
+
+        console.log((num % 4) == 0)  
+        // num 나누기 2를 했을 때, 나머지를 출력한다. 
+
+        console.log(num ** 3) //** num의 3승, 거듭제곱
+    
+        num = num + 5; //재할당
+        num += 5; // 위의 식과 똑같음
+
+        //num *= 5;
+
+        num = num +1;
+        // num++; = ++num;
+
+        console.log(true && false) 
+        console.log(num == 50 && num >= 50)
+        // && 앞뒤가 모두 참일 때, true를 반환, 
+        //둘 중 하나라도 거짓일 경우 false를 반환 
+        
+        console.log(true || false)
+        console.log(num > 50 && num <= 20)
+
+        // || 는 or 연산 : 앞과 뒤 중 하나라도 참일 경우, true 반환
+        // 둘다 거짓일 경우에만 false
+
+        console.log(!true)
+        console.log(!(num > 50))
+
+        //true 는 false 로 false는 true 
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
