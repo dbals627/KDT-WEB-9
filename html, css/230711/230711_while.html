@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1~99 자연수 중에 2 또는 배수
+        let i = 0;
+        let sum = 0;
+        while(i < 100) {
+            if (i%2==0 || i%3==0) {
+                sum += i
+            }      
+            i++
+        }
+        console.log(sum) 
+
+        while(i < 10) {
+            // 반복할 코드
+            console.log(i)
+            i++;
+        }
+
+        let fruits = ["apple", "banana", "orange", "grape", "watermelon"]
+
+        for(let i=0; i < fruits.length; i++) 
+        console.log(fruits[i]);
+
+        for(let f of fruits) {
+            console.log(f);
+        }
+
+        // for(변수선언 of 배열) {
+        //  }
+ 
+    
+            
+    </script>
+</body>
+</html>

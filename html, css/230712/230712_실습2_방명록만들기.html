@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <p>
+        방명록입니다.
+    </p>
+
+    작성자 <input type="text" id="name">
+    <br/>
+    내용 <input type="text" id="content">
+
+    <br />
+    <br />
+    <button type="button" onclick="addRow()">작성</button>
+
+    <br />
+    <br />
+
+    <table id="table" border="1">
+        <tr id="tr">
+            <th id="th1">번호</th>
+            <th id="th2">작성자</th>
+            <th id="th3">내용</th>
+            <th id="th4">작성일</th>
+        </tr>
+
+    </table>
+
+    <script>
+        let num = 1;
+        let date = Date()
+       
+        function addRow() {
+            let table = document.querySelector("table");
+            let tr = document.createElement("tr");
+            let NumTd = document.createElement("th1");
+            NumTd.innerText = num; 
+
+            let writerTr = document.createElement("th2")
+            let writer = document.getElementById("name").value
+
+            let contentTr = document.createElement("th3")
+            let content = document.getElementById("content").value
+
+            let dateTr = document.createElement("th4")
+            let date = document.getElementById("")
+
+            tr.appendChild(NumTd)
+            tr.appendChild(writerTr)
+
+            table.appendChild(tr)
+            num++;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple", "banana", "orange", "grape", "watermelon"]
+
+        for(let i=0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+
+        } 
+        //반복문 끝나면 다음으로 넘어감 0~9까지 열번 반복하는 코드 
+
+        let number =5; 
+        let sum = 0;
+
+        for(let i=1; i < 6; i--) {
+            sum += i;
+            // sum = sum + i
+        }
+        console.log(sum)
+
+        for(let i=5; i > 0; i--) {
+            console.log(i)
+        }
+
+        for(let i=1; i<=5; i++) {
+            for(let j=0; j<5; j++) {
+                console.log(i, j)
+            }
+        }
+
+        //25번 반복
+        let i = Number(prompt("숫자를 입력하세요."))
+
+        for(let i=13; i<10000; i++) {
+            if (i%13==0 && i%2==1) {
+            console.log(i)
+            }
+                
+        }
+
+        for(let i=2; i<100; i++) {
+            if (i%2 == 0) {
+            console.log(i)
+            }
+        }
+
+        // for(let i=1; i<10; i++) {
+        //     for(let j=1; j<10; j++){
+        //         console.log(${i}x${j} = ${i+j} )
+        //     }
+        // }
+
+        // 사용자가 숫자를 입력하길 기대하면서, 
+        // 1~숫자까지의 합을 구하는 코드 
+
+        // let num = NaN;
+        // while(isNaN(num)){   //숫자아닌값true 
+        //     num = Number(prompt("숫자를 입력하세요"));
+        // }
+
+        // 반복되는 숫자가 지정되어있지 않을때, 숫자가 false가 되면 멈춤
+        
+        // while 문은 보통 반복될 횟수가 지정할 수 없을 때 
+        // let name = 5;
+        // while(true) {
+        //     name = Number(prompt("10이상의 숫자를 입력하세요"));
+        //     if(name >= 10) {
+        //         break;
+        //     }
+        // } 
+        
+    </script>
+    
+</body>
+</html>

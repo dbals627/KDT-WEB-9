@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let str = 'Happy day~!';
+
+        console.log(str.length); //문자열의 길이
+        console.log(str.toUpperCase()) //문자를 대문자로
+        console.log(str.toLowerCase()) //문자를 소문자로
+
+        'python', 'Python', 'PYthon'
+        'python' == 'Python' //다름 
+
+        console.log(str.indexOf('p')) 
+        //괄호안의 문자가 몇번째의 위치 
+        //없으면 -1이 나옴 
+
+        console.log(str.slice(2, 7))  //(시작인덱스, 끝인덱스) 
+        console.log(str.replace('p', 'a')) // 첫번째나오는 p를 찾아서 a로 변경
+        // console.log(str.replaceALL('p', 'a'))    //모두 변경
+
+        console.log(str.repeat(2))  //문자를 두번 반복 
+        console.log(str.trim()) //공백을 없애줌
+        
+        console.log(str.split(" "))  
+        //정보를 잘라서 보여줌
+        //" " (공백)을 기준으로 잘라서 배열로 보여줌 
+
+
+        let hello = "Hello~"
+
+        helloArr = hello.split("").reverse().join("")
+        // 1. hello~ 를 ""를 기준으로 쪼갠 후 (배열로 나타남)
+        // 2. 리버스 시킨다.
+        // 3. ""를 기준으로 합친다. 
+        console.log(helloArr);
+
+        let name = "민유전"
+        myname = name.split("").reverse().join("")
+        console.log(myname)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let fruits = ["apple", "banana", "orange", "grape"]
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     console.log(fruits[i]);
+
+        // }
+
+        // for (let fruit of furits) {
+        //     console.log(fruit);
+        // }
+
+        //for Each는 함수의 매개변수로 함수를 받음 
+        // fruits.forEach(function (data, index, arr) {  // 원소, 인덱스, 배열의 순서!
+        //     console.log("data:", data); 
+        //     console.log("index:", index);
+        //     console.log("arra:", arr);
+        // })
+
+        // let numbers = [1,2,3,4,5,6];
+        // let fruits = ["사과", "바나나", "수박", "포도", "파인애플"];
+
+        // numbers.forEach(function (data, index, arr) {
+        //     console.log(data);
+        //     console.log(index);
+        //     console.log(arr);
+        // })
+
+
+        // fruits.forEach(() => {
+
+
+        // })
+        // for (let i = 0; i < fruits.length; i++) {
+        //     console.log(fruits[i]);
+        // 
+        
+        let sum = 0
+        let numbers = [];
+        for (let i = 1; i <= 100; i++) {
+            numbers.push(i);
+        }
+        console.log(numbers);
+
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+
+        }
+        console.log(sum);
+
+        sum = 0;
+        for (let n of numbers) {
+            sum = + n;
+        }
+        console.log(sum);
+
+        sum = 0;
+        numbers.forEach((data) => {
+            sum += data;
+        })
+        console.log(sum);
+
+        //for of랑 foreach는 배열일 때만 사용 
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    값1: <input type="text" id="value1">
+    <br />
+    값2: <input type="text" id="value2">
+    <br />
+    연산자: <input type="text" id="cal">
+    <br />
+    결과: <input type="text" id="result" value="">
+
+    <br />
+    <br />
+
+    <button type="button" onclick="calculate()">계산하기</button>
+    <button type="button" onclick="origin()">초기화</button>
+
+    <script>
+        function calculate() {
+            let num1 = document.getElementById("value1").value;
+            let num2 = document.getElementById("value2").value;
+            let op = document.getElementById("cal").value;
+            let result = 0
+
+            switch (op) {
+                case "+":
+                    result = Number(num1) + Number(num2);
+                    break;
+
+                case "-":
+                    result = Number(num1) - Number(num2);
+                    break;
+
+                case "*":
+                    result = Number(num1) * Number(num2);
+                    break;
+
+                case "/":
+                    result = Number(num1) / Number(num2);
+                    break;
+            } document.getElementById("result").value = result;
+        }
+
+        function origin() {
+            document.getElementById("value1").value = null;
+            document.getElementById("value2").value = null;
+            document.getElementById("cal").value = null;
+            document.getElementById("result").value = null;
+
+           
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

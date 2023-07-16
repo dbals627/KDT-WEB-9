@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 조건문 : 조건에 따라 다른 코드를 실행시키는 문법
+        let isShow = false
+        // if(isShow) {  
+        //     console.log("보여준다!")
+        // } //false이기 때문에 콘솔에 아무것도 보여지지 않음.
+
+        // if(isShow) {  //괄호안이 참이면 콘솔로그 실행
+        //     console.log("보여준다!");
+        // } else {
+        //     // 위 조건(isShow)이 거짓일 경우 실행 
+        //     console.log("보여주지 않는다!");
+        // }
+
+        // let number = 5;
+
+        // if ( number < 5 ) { 
+        //     console.log("5보다 작거나 같다") 
+
+        // } else if ( number > 10 ) {}
+        //     console.log("5보다 작다")
+
+        // } else {
+        //     console.log("다 아니야")
+        // }
+
+        // if (조건1) {}
+        //     else if(조건2) {} //조건1이 아니면서 다음조건(조건2)을 만족할 경우
+        //     else if(조건3) {} //조건1과 조건2가 아니면서 다음조건(조건3)을 만족할 경우
+        //     else {} // 위 조건들을 모두 만족하지 않을 경우
+
+        //else는 한번만, else if는 여러번
+        //else가 나오면 if문이 끝났다는 것, else if만 단독으로 올 수 없음
+
+
+        let age = Number(prompt("나이를 입력하세요"))
+        let gender = (prompt("성별을 입력하세요"))
+
+        if (age >= 20) {
+            alert("성인")
+
+            if (gender == "여자") {
+                alert("성인 여자")
+            }
+
+            else {
+                alert("성인 남자")
+            }
+
+
+        } else if (age >= 17) {
+            alert("고등학생")
+
+            if (gender == "여학생") {
+                alert("고등학생 여학생")
+            }
+
+            else {
+                alert("고등학생 남학생")
+            }
+        }
+
+        else if (age >= 14) {
+            alert("중학생")
+            if (gender == "여학생") {
+                alert("중학생 여학생")
+            }
+
+            else {
+                alert("중학생 남학생")
+            }   
+        }
+
+        else if (age >= 8) {
+            alert("초등학생")
+            if (gender == "여학생") {
+                alert("초등학생 여학생")
+            }
+
+            else {
+                alert("초등학생 남학생")
+            }  
+        }
+
+        else if (age >= 0) {
+            alert("유아")
+         } if (gender == "여자") {
+                alert("유아 여자")
+            }
+
+            else {
+                alert("유아 남자")         
+        }
+
+        // if (gender = "female") {
+        //     console.log("여자")
+        // } else if (gender = "male") {
+        //     console.log("남자")
+        // }
+
+    </script>
+
+</body>
+
+</html>

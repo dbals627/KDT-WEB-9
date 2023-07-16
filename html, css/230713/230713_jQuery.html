@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" name="id" id="id" />
+    <button onclick="submitt()">바껴라!</button>
+    <button onclick="btn2()">사라져라</button>
+
+
+    <div></div>
+
+    <div class="container">
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="orange"></div>
+    </div>
+
+    <button onclick="fn3">요소 탐색</button>
+
+
+    <script>
+        function fn3() {
+            //console.log($(".container").children().removeClass("red"))
+
+            console.log($(".orange").parent())
+            console.log($(".orange").parents())
+            console.log($(".orange").next())
+            console.log($(".orange").prev())
+
+            console.log($(".red").nextAll())
+
+
+
+        }
+
+
+        function submitt() {
+
+
+
+            //let valueJQeury = $("#id").val()
+            //let valueJS = document.getElementById("id").value
+            //console.log(valueJQeury, valueJS)
+
+            //document.getElementById("id").value = "aaa";
+            //$("#id").val("배고파");
+
+            // css 변경
+            //$("div").css("background-color", "yellow")
+            //$("div").css("border-radius", "20px")
+
+            // attr 함수 
+            $("input").attr("placeholder", "아이디를 입력하세요.")
+
+            // text 함수 .innerText
+            //$("div").text("배고파") 
+            // text는 파싱하지 않음 (태그나타나지 않음)
+
+            // html 함수 .innerHTML
+            //$("div").html("<p>HI</p>")
+
+            // append() 함수
+            //$("div").append(`<h1>안녕?</h1>`)
+
+            // prepend 함수 
+            //$("div").prepend(`<h1>안녕?</h1>`)
+
+            // after 함수
+            //$("div").after(`<h1>안녕?</h1>`)
+
+            // before 함수
+            // $("div").before(`<h1>안녕?</h1>`)
+
+            // remove 함수 
+            //$("div").remove()
+
+            // empty 함수
+            //$("div").empty()
+
+            // addClass 함수
+            //$("div").addClass("red")
+
+        }
+
+        function btn2() {
+            // removeClass 함수
+            //$("div").removeClass()
+            //$("div").removeClass("red")
+
+            // hasClass 함수 
+            console.log($("div").hasClass("red"))
+
+            // toggleClass 함수 
+            $("div").toggleClass("red")
+            //있는 거는 빼고, 없는 거는 넣는다. 
+
+        }
+
+
+    </script>
+</body>
+
+</html>
