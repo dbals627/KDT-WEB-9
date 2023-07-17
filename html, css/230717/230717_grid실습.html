@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .container {
+            display: grid;
+            height: 700px;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(4, 80px);
+        }
+
+        .box {
+            /*height: 300px;
+            width: 100px;*/
+            display:flex;
+            align-items :center;
+            justify-content:center;
+        }
+
+        .one {
+            background-color: #F94144;
+            grid-column: auto / span 6;
+        }
+
+        .two {
+            background-color: #f3722c;
+            grid-row: auto / span 2 ;
+        }
+
+        .three {
+            background-color: #f9c74f;
+            grid-column: auto / span 4;
+        }
+
+        .four {
+            background-color: #43aa8b;
+            grid-row: auto / span 2 ;
+        }
+
+        .five {
+            background-color: #f8961e;
+            grid-column : auto / span 2;
+        }
+
+        .six {
+            background-color: #90be6d;
+            grid-column : auto / span 2;
+
+        }
+
+        .seven {
+            background-color: #4444ff;
+            grid-column: auto / span 6;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box one">
+            <p>#F94144</p>
+        </div>
+        <div class="box two">
+            <p>#f3722c</p>
+        </div>
+        <div class="box three">
+            <p>#f9c74f</p>
+        </div>
+        <div class="box four">
+            <p>#43aa8b</p>
+        </div>
+        <div class="box five">
+            <p>#f8961e</p>
+        </div>
+        <div class="box six">
+            <p>#90be6d</p>
+        </div>
+        <div class="box seven">
+            <p>#4444ff</p>
+        </div>
+    </div>
+</body>
+
+</html>
