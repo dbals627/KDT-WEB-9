@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function backgroundColor(color) {
+            return new Promise((resolve, reject) => {
+                setTimeout(function () {
+                    document.body.style.backgroundColor = color;
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        //실행
+
+        backgroundColor('red')
+            .then(() => {
+                return backgroundColor('orange');
+            }).then(() => {
+                return backgroundColor('yellow');
+            }).then(() => {
+                return backgroundColor('green');
+            }).then(() => {
+                return backgroundColor('blue');
+            });
+
+
+        //async/await
+        async function exec() {
+            await backgroundColor('red', 1000);
+            await backgroundColor('orange', 1000);
+            await backgroundColor('yellow', 1000);
+            await backgroundColor('green', 1000);
+            await backgroundColor('blue', 1000);
+        }
+
+
+    </script>
+</body>
+
+</html>
