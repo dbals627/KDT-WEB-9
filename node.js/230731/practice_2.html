@@ -12,13 +12,12 @@
             setTimeout(() => {
                 console.log(name)
                 resolve(name)
-
             }, 1000);
         });
     }
     function back() {
         return new Promise((resolve => {
-            setTimeout( () => {
+            setTimeout(() => {
                 console.log('back');
                 resolve('back')
             }, 1000);
@@ -28,7 +27,6 @@
     function hell() {
         return new Promise((resolve) => {
             setTimeout(() => {
-                //console.log('callback hell');
                 resolve('callback hell');
             }, 1000);
         });
@@ -36,29 +34,31 @@
 
 
     //promise로 실행 
-    call('martin').then((res) => {
-        console.log(`${res} 반가워`);
+    call('kim')
+    .then((name) =>  {
+        console.log( `${name} 반가워`);
         return back();
 
     })
-    .then( (res) => {
-        console.log(`${res}을 실행했구나`);
+    .then((txt)=> {
+        console.log(`${txt} 을 실행했구나`);
         return hell();
 
 
     })
-    .then((res) => {
-        console.log(`여기는 ${res}`);
+    .then((msg) => {
+        console.log(`여기는 ${msg}`);
     });
 
 
     //async/await 
+    
     async function exec() {
-        let name = await call('martin')
-        console.log(`${res} 반가워`);
+        let name = await call('yumin')
+        console.log(`${name} 반가워`);
         let res = await back();
         console.log(`${res}을 실행했구나`);
-        let resut = await hell();
+        let result = await hell();
         console.log(`여기는 ${result}`);
 
     }
@@ -66,51 +66,52 @@
     exec();
 
 
+    //내가 한 부분
 
-        function call() {
-            return new Promise((resolve, reject) => {
-                setTimeout(function(){
-                    console.log(name);
-                    resolve();
-                }, 1000);
-            });
-        }
+        // function call() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(function(){
+        //             console.log(name);
+        //             resolve();
+        //         }, 1000);
+        //     });
+        // }
 
-        function back() {
-            return new Promise((resolve, reject) => {
-                setTimeout(function(){
-                    console.log('back');
-                    resolve();
-                }, 1000);
-            });
-        }
+        // function back() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(function(){
+        //             console.log('back');
+        //             resolve();
+        //         }, 1000);
+        //     });
+        // }
 
-        function hell() {
-            return new Promise((resolve, reject) => {
-                setTimeout(function(){
-                    console.log('callback hell');
-                    resolve();
-                }, 1000);
-            });
-        }
+        // function hell() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(function(){
+        //             console.log('callback hell');
+        //             resolve();
+        //         }, 1000);
+        //     });
+        // }
 
-        call("yumin")
-        .then(() => {
-                console.log(name + "반가워")
-                return (name + "반가워");
-            })
+        // call("yumin")
+        // .then(() => {
+        //         console.log(name + "반가워")
+        //         return (name + "반가워");
+        //     })
         
-        back()
-            .then(() => {
-                console.log(back + "을 실행했구나")
-                return(back + "을 실행했구나");
-            })
+        // back()
+        //     .then(() => {
+        //         console.log(back + "을 실행했구나")
+        //         return(back + "을 실행했구나");
+        //     })
 
-        hell()
-        .then(() => {
-            console.log("여기는" + hell)
-            return("여기는" + hell)
-        })
+        // hell()
+        // .then(() => {
+        //     console.log("여기는" + hell)
+        //     return("여기는" + hell)
+        // })
     </script>
 </body>
 </html>

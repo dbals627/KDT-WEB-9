@@ -1,26 +1,73 @@
-exports.getVisitors = () => {
-    return [
-        { id: 1, name: '홍길동', comment: '내가 왔다' },
-        { id: 2, name: '이찬혁', comment: '으라차차' },
-    ];
+// exports.getVisitors = () => {
+//     return [
+//         { id: 1, name: '홍길동', comment: '내가 왔다' },
+//         { id: 2, name: '이찬혁', comment: '으라차차' },
+//     ];
+// };
+const mysql = require('mysql');
+//mysql 연결
+const conn = mysql.createConnection({
+    host: 'localhost',
+    user: 'yumin',
+    password: '9982',
+    database: 'kdt9',
+    port: 3306,
+});
+
+conn.connect((err) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log('connect');
+});
+
+exports.getVisitors = (callback) => {
+    const query = 'SELECT * FROM visitor';
+    conn.query(query, (err, rows) => {
+        console.log(rows);
+        callback(rows);
+    });
 };
 
-// const mysql = require('mysql');
+exports.getVisitor = (id, callback) => {
+    const query = `SELECT * FROM visitor WHERE id=${id}`;
+    conn.query(query, (err, rows) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        callback(rows);
+    });
+};
 
-// const conn = mysql.createConnection ({
-//     host: 'localhost', 
-//     user: 'user',
-//     password: '1234',
-//     database: 'yumin',
-// });
+exports.postVisitor = (data, callback) => {
+    const query = `INSERT INTO visitor (name, comment) VALUES ('${data.name}', '${data.comment}') `;
+    conn.query(query, (err, rows) => {
+        console.log('rows', rows);
+        callback(rows);
+    });
+};
 
-// exports.getVisitors = (cb) => {
-// conn.query(`SELECT * FROM visior`, (err, rows) => {
-//     if (err) {
-//         throw err;
-//     }
+exports.patchVisitor = (data, callback) => {
+    const query = `UPDATE visitor SET name='${data.name}', comment='${data.comment}' WHERE id=${data.id} `;
+    conn.query(query, (err, rows) => {
+        console.log('rows', rows);
+        if (err) {
+            console.log(err);
+            return;
+        }
+        callback();
+    });
+};
 
-//     console.log('Visitor.js: ', rows);
-//     cb(rows);
-// });
-// };
+exports.deleteVisitor = (data, callback) => {
+    const query = `DELETE FROM visitor WHERE id=${data.id}`;
+    conn.query(query, (err, rows) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        callback();
+    });
+};

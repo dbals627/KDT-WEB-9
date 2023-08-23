@@ -4,21 +4,23 @@ const app = express();
 const PORT = 8000;
 
 app.set('view engine', 'ejs');
-app.use(cookieParser("asdfzxcv")) 
+app.use(cookieParser())
 
 //cookie 옵션 객체
 const cookieConfig = {
     httpOnly: true,
-    expires: new Date(Date.now() + 1000 * 60 * 60 * 24), 
-    signed: true,
+    maxAge: 60 * 1000, //1min
 };
 
 app.get('/', (req, res) => {
-    res.render('index');
+    console.log(req.cookies)
+    res.render('index', { popup: req.cookies.modal }); //객체접근, 이값을 프론트로 보내야함 
 });
 
-app.get('/cookie', (req, res) => {
-    res.render('cookie');
+app.post('/setCookie', (req, res) => {
+    //쿠키생성
+    res.cookie('modal', 'hide', cookieConfig);
+    res.send({ result: true, msg: '쿠키 생성 완료' });
 });
 
 app.listen(PORT, () => {

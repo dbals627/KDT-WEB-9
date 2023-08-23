@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>회원 리스트</h1>
+    <a href="/">홈으로 이동</a>
+    <h3>회원 정보 추가</h3>
+    <div>
+        <form name="register">
+            <label for="id">id</label>
+            <input type="text" id="id"> </br>
+            <label for="id">이름</label>
+            <input type="text" id="name"> </br>
+            <label for="id">성별</label>
+            <input type="text" id="gender"> </br>
+            <label for="id">전공</label>
+            <input type="text" id="major"> </br>
+            <button type="button" onclick="registerFunc()">등록</button>
+        </form>
+    </div> 
+
+    <ul>
+      <% for (let i = 0; i < userinfo.length; i++) { %>
+      <li>
+        <b><%= userinfo[i].id %> <%= userinfo[i].name %> <%= userinfo[i].gender %> <%= userinfo[i].major %></b>
+        <% } %>
+      </li>
+    </ul>
+
+    <script>
+        function registerFunc() {
+            const form = document.forms['register']
+            const data = {
+                name: form.name.vaule,
+                gender: form.gender.vaule,
+                major: form.major.vaule,
+            };
+            axios({
+                method: 'POST',
+                url:'/userinfo',
+                data,
+            }).then(res => {
+                if( res.data.result ) {
+                    document.location.reload();
+                }
+            });
+        }
+    </script>
+  </body>
+</html>

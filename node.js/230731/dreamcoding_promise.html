@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //1. Producer
+        //새로운 promise가 만들어질때, executor 라는 함수가 자동적으로 실행됨 
+        const promise = new Promise((resolve, reject) => {
+            console.log('doing something...');
+            setTimeout(() => {
+                resolve('ellie');
+                //reject(new Error('no network'));
+            }, 2000);
+        });
+
+        //어떤일을 하다가 2초 후에 resolve라는 콜백함수를 호출하면서 ellie라는 값을 전달
+
+        //2. Consumers : then, catch, finally 
+        promise
+            .then(value => {
+                console.log(value);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+
+        //value라는 매개변수에 resolve로 호출한 ellie값이 쓰여짐 
+
+        //3. Promise chaining
+        const fetchNumber = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(1), 1000);
+        });
+
+        fetchNumber
+            .then(num => num * 2)
+            .then(num => num * 3)
+            .then(num => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => resolve(num - 1), 1000);
+
+                });
+            })
+
+            .then(num => console.log(num));
+
+        //4. Error Handling 
+        
+
+        // async & await
+        
+        //1. async
+        async function fetchUser() {
+            return 'ellie';
+        }
+
+        const user = fetchUser();
+        user.then(console.log)
+        console.log(user);
+
+        //2. await 
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function getApple() {
+            await delay(1000);  //3초 후 사과 리턴
+            return '사과';
+        }
+
+        async function getBanana() {
+            await delay(1000); //3초 후 바나나 리턴
+            return '바나나';
+        }
+
+        async function pickFruits() {
+            const apple = await getApple();
+            const banana = await getBanana();
+            return `${apple} + ${banana}`;
+        }
+
+        pickFruits().then(console.log)
+
+    </script>
+</body>
+
+</html>

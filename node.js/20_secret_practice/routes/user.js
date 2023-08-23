@@ -1,16 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controller/user');
-const { User } = require('../models');
 
 router.get('/', controller.index);
-router.post('/login', controller.login);
-router.get('/signup', controller.signup);
-
-//로그인
-
-
-
+router.get('/register', controller.get_register);
+router.get('/login', controller.get_login);
 //회원가입
+router.post('/register', controller.register);
+//로그인
+router.post('/login', controller.login);
 
 module.exports = router;

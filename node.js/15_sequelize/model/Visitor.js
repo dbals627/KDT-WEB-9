@@ -8,8 +8,8 @@ const mysql = require('mysql');
 //mysql 연결
 const conn = mysql.createConnection({
     host: 'localhost',
-    user: 'news',
-    password: '1234',
+    user: 'yumin',
+    password: '9982',
     database: 'kdt9',
     port: 3306,
 });
