@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Socket IO</div>
+    <ul></ul>
+    <form id="chat">
+      <input type="text" id="user" placeholder="사용자명" />
+      <input type="text" id="message" placeholder="채팅내용" /><br />
+      <button>채팅</button>
+    </form>
+
+    <script>
+        //폼과 ul태그 가져오기
+      const chatForm = document.querySelector("#chat");
+      const ul = document.querySelector("ul");
+      const socket = io();
+      //이벤트 생성
+      socket.emit("open_message", { name: "client", message: "Hello Server" }, (res) => {
+          console.log(res);
+        }
+      );
+      //서버(백엔드)로 이벤트 보내줌
+      //이벤트 메시지"open_message" (클라이언트에서 보내는 이름), 객체 안에 담긴 데이타
+      //res는 콜백함수 cb(arg)값이 들어감
+      //emit과 on은 항상 짝! 같이 있어야 함
+
+      //서버를 받음 
+        socket.on('backend_message', (arg) => {
+            const li = document.createElement('li')
+            li.textContent = `${arg.name} : ${arg.message}`;
+            ul.appendChild(li);
+        });
+
+      //폼이벤트
+      chatForm.addEventListener('submit' , (e) => {  
+        //e는 submit이 있으면 항상 preventdefault해야함
+        e.preventDefault();
+        const user = chatForm.querySelector('#user');
+        const message = chatForm.querySelector('#message');
+        socket.emit('form_message', {name:user.value, message: message.value})
+
+      });
+    </script>
+  </body>
+</html>
