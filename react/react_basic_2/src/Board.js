@@ -31,16 +31,17 @@ class Board extends Component {
     }
 
     render() {
+        const { inputWriter, inputTitle, comments } = this.state
         return (
             <>
                 <form>
                     <label htmlFor="writer">작성자:</label>
-                    <input id="writer" type="text" value={this.state.inputWriter} onChange={(e) => this.onChange(e)} />
+                    <input id="writer" type="text" value={inputWriter} onChange={(e) => this.onChange(e)} />
 
                     <label htmlFor="title">제목:</label>
-                    <input id="title" type="text" value={this.state.inputTitle} onChange={(e) => this.setState({ inputTitle: e.target.value })} />
+                    <input id="title" type="text" value={inputTitle} onChange={(e) => this.setState({ inputTitle: e.target.value })} />
 
-                    <button type="button" onClick={this.addComment}>작성</button>
+                    <button type="button" onClick={comments}>작성</button>
                 </form>
 
                 <table border={1} cellSpacing={0}>

@@ -4,6 +4,12 @@ import './App.css';
 import DisplayNone from './DisplayNone';
 import Board from './Board';
 import CounterFunc from './CounterFunc';
+import BoardSearch from './BoardSearch'
+import ToggleFunc from './ToggleFunc';
+import BoardFunc from './BoardFunc';
+import TodoFunc from './TodoFunc';
+import LifeCycleClass from './LifeCycleClass'
+
 
 
 function App() {
@@ -14,7 +20,20 @@ function App() {
 
     {/* <Board /> */}
 
-    <CounterFunc />
+    {/* <CounterFunc /> */}
+    {/* <BoardSearch /> */}
+
+    {/* <ToggleFunc /> */}
+
+    {/* <pracColor /> */}
+    {/* <displayFunc /> */}
+    {/* <Board /> */}
+    {/* <BoardFunc /> */}
+
+    {/* <BoardSearch /> */}
+    {/* <TodoFunc /> */}
+    <LifeCycleClass />
+
   </>
 }
 
