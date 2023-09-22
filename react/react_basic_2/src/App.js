@@ -21,7 +21,7 @@ function App() {
     {/* <Board /> */}
 
     {/* <CounterFunc /> */}
-    {/* <BoardSearch /> */}
+    <BoardSearch />
 
     {/* <ToggleFunc /> */}
 
@@ -32,7 +32,7 @@ function App() {
 
     {/* <BoardSearch /> */}
     {/* <TodoFunc /> */}
-    <LifeCycleClass />
+    {/* <LifeCycleClass /> */}
 
   </>
 }

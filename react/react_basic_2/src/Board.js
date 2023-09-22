@@ -49,7 +49,7 @@ class Board extends Component {
                         <tr>
                             <th>번호</th>
                             <th>제목</th>
-                            <th>작성자</th>
+                            <th>작성자</th>..
                         </tr>
                     </thead>
 
