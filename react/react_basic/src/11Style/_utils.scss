@@ -1,0 +1,32 @@
+// _utils.scss
+// scss파일명앞에 _를 붙여서 생성하면 파일단위로 분리되어서 컴파일 되지 않는다.
+
+$color-red: red;
+$color-orange: orange;
+$color-yellow: yellow;
+$color-green: green;
+$color-blue: blue;
+$color-navy: navy;
+$color-purple: purple;
+$color-black: black;
+$color-white: white;
+$color-pink: pink;
+
+@mixin box($size) {
+  width: $size;
+  height: $size - 50px;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: $size;
+}
+
+@mixin circle($num) {
+  transform: $num;
+}
