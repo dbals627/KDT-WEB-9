@@ -9,26 +9,26 @@ interface Data {
   age: number;
 }
 //컴포넌트 제작 방법2
-const Types: React.FC<Props> = (props) => {
+const Types: React.FC<Props> = () => {
   const [count, setCount] = useState<Data | null>();
 
   const myInput = useRef<HTMLInputElement>(null);
 
-  return (
-    <>
-      <h2>Hello {props.name}</h2>
-      <input ref={myInput} />
-    </>
-  );
+  // return (
+  //   <>
+  //     <h2>Hello {props.name}</h2>
+  //     <input ref={myInput} />
+  //   </>
+  // );
 };
 
 export default Types;
 
-//컴포넌트 제작 방법1
-// export default function Types({ name }: Props) {
-//   return (
-//     <>
-//       <h2>Hello {name}</h2>
-//     </>
-//   );
-// }
+컴포넌트 제작 방법1
+export default function Types({ name }: Props) {
+  return (
+    <>
+      <h2>Hello {name}</h2>
+    </>
+  );
+}
